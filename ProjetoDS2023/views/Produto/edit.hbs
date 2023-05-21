@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit de Produto</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <form method="post" action="/produto/{{result.id}}?_method=put">
+        <div>
+            <label for="id-input-id">ID</label>
+            <input type="text" id="id-input-id" value="{{result.id}}" disabled>
+        </div>
+        <div>
+            <label for="id-input-nome">Nome</label>
+            <input type="text" name="nome" id="id-input-nome" value="{{result.nome}}" required>
+        </div>
+        <div>
+            <label for="id-input-preco">Preço</label>
+            <input type="text" name="preco" id="id-input-preco" value="{{result.preco}}" required>
+        </div>
+        <div>
+            <label for="id-input-TipoProduto_id">Tipo</label>
+            <input type="text" name="TipoProduto_id" id="id-input-TipoProduto_id" value="{{result.TipoProduto_id}}" required>
+        </div>
+        <div>
+            <label for="id-input-ingredientes">Ingredientes</label>
+            <input type="text" name="ingredientes" id="id-input-ingredientes" value="{{result.ingredientes}}" required>
+        </div>
+        <button type="submit">Enviar</button>
+        <a href="/produto">Voltar</a>
+    </form>
+</body>
+</html>

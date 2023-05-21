@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index de Produto</title>
+    <link rel="stylesheet" href="/css/Produto/index.css">
+</head>
+<body>
+    <a href="/recurso" class="btn btn-primary">Voltar</a>
+    <a href="/produto/create" class="btn btn-primary">Criar um Produto</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result}}
+                <tr>
+                    <th>{{id}}</th>
+                    <td>{{descricao}}</td>
+                    <td>{{nome}}</td>
+                    <td>{{preco}}</td>
+                    <td>
+                        <a href="/produto/{{id}}" class="btn btn-primary">Mostrar</a>
+                        <a href="/produto/{{id}}/edit" class="btn btn-secondary">Editar</a>
+                        <a href="#" class="btn btn-danger" onclick="deleteResource({{id}})">Remover</a>
+                        {{!-- <form method="post" action="/produto/{{id}}?_method=delete">
+                            <button type="submit">Remover</button>
+                        </form> --}}
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <script>
+        function deleteResource(id){
+            if( confirm("Deseja realmente remover?") ){
+                //console.log(`Deve remover ${id}`);
+                fetch(`/produto/${id}`, {
+                    method: "DELETE"
+                }).then( response => {
+                    if(response.redirected){
+                        window.location.href = response.url;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

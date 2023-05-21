@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show de Produto</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <label for="id-input-id">ID</label>
+        <input type="text" id="id-input-id" value="{{result.id}}" readonly>
+    </div>
+    <div>
+        <label for="id-input-nome">Nome</label>
+        <input type="text" id="id-input-nome" value="{{result.nome}}" readonly>
+    </div>
+    <div>
+        <label for="id-input-preco">Preço</label>
+        <input type="text" id="id-input-preco" value="{{result.preco}}" readonly>
+    </div>
+    <div>
+        <label for="id-input-TipoProduto_id">Tipo</label>
+        <input type="text" id="id-input-TipoProduto_id" value="{{result.TipoProduto_id}}" readonly>
+    </div>
+    <div>
+        <label for="id-input-ingredientes">Ingredientes</label>
+        <input type="text" id="id-input-ingredientes" value="{{result.ingredientes}}" readonly>
+    </div>
+    <div>
+        <label for="id-input-dataAtualizacao">dataAtualizacao</label>
+        <input type="text" id="id-input-dataAtualizacao" value="{{result.dataAtualizacao}}" readonly>
+    </div>
+    <div>
+        <label for="id-input-dataCriacao">dataCriacao</label>
+        <input type="text" id="id-input-dataCriacao" value="{{result.dataCriacao}}" readonly>
+    </div>
+    <a href="/produto">Voltar</a>
+</body>
+</html>
