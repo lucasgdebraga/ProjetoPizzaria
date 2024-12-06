@@ -10,9 +10,13 @@ desenvolvimento para facilitar o processo de atualização durante o desenvolvim
 🚀 Funcionalidades 
 
 •	Configuração de rotas utilizando Express.
+
 •	Manipulação de requisições e respostas com body-parser.
+
 •	Renderização de páginas dinâmicas com hbs.
+
 •	Override de métodos HTTP com method-override.
+
 •	Conexão ao banco de dados MySQL utilizando a biblioteca mysql2.
 
 🧑‍💻 Pré-requisitos
