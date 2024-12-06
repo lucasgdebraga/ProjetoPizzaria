@@ -30,17 +30,21 @@ Certifique-se de que você possui as seguintes ferramentas instaladas no seu sis
 Siga os passos abaixo para configurar o projeto:
 
 1.	Clone este repositório:
+   
 git clone <URL_DO_REPOSITORIO>
  
 3.  Navegue até o diretório do projeto:
+   
 cd projetods2023
 
 5.  Instale as dependências:
+   
 npm install
 
 Uso
 
 Para iniciar o servidor local, utilize o seguinte comando:
+
 npm start  
 
 Este comando executará o projeto utilizando o nodemon, que reinicia o servidor automaticamente sempre que houver alterações nos arquivos.
@@ -61,13 +65,19 @@ projetods2023/
 🛠️ Tecnologias Utilizadas
  
 •	Node.js
+
 •	Express
+
 •	HBS (Handlebars)
+
 •	MySQL2
+
 •	Body-parser
+
 •	React
 
 Autor
+
 •	Leonardo Bravo Estácio
 
 📜 Licença
